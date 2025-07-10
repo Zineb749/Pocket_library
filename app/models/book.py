@@ -6,14 +6,14 @@ class Book(Base):
     __tablename__ = "books"
 
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String(255), index=True)             # longueur fixée à 255
-    author = Column(String(255))                         # longueur fixée à 255
+    title = Column(String(255), index=True)
+    author = Column(String(255))
     description = Column(Text, nullable=True)
     purchase_date = Column(Date, nullable=True)
-    cover_url = Column(String(255), nullable=True)      # longueur fixée à 255
+    cover_url = Column(String(255), nullable=True)
 
-    status = Column(String(50), default="a_lire", nullable=False)   # longueur 50, suffisant pour ce champ
-    source = Column(String(50), default="manual", nullable=False)  # longueur 50
+    status = Column(String(50), default="a_lire", nullable=False)
+    source = Column(String(50), default="manual", nullable=False) 
 
     reviews = relationship("Review", back_populates="book")
     user_books = relationship("UserBook", back_populates="book")
