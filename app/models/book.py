@@ -1,3 +1,9 @@
+# Fichier : models/book.py
+# Ce fichier définit le modèle Book (livre) pour la base de données.
+# Il représente un livre que l'utilisateur peut voir, ajouter ou classer.
+# Contient aussi les relations avec les avis (reviews) et les livres de l'utilisateur (UserBook).
+
+
 from sqlalchemy import Column, Integer, String, Text, Date
 from sqlalchemy.orm import relationship
 from app.database import Base

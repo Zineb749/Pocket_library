@@ -1,3 +1,12 @@
+"""
+Ce module définit les routes API pour gérer les livres dans l'application.
+
+- GET /books/ : permet de rechercher des livres avec des filtres optionnels (titre, auteur, statut).
+- POST /books/ : permet d'ajouter un nouveau livre dans la base de données.
+
+Utilise SQLAlchemy pour interagir avec la base de données et FastAPI pour exposer ces fonctionnalités via une API REST.
+"""
+
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 from typing import List, Optional

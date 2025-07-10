@@ -1,3 +1,8 @@
+# Fichier : models/review.py
+# Ce fichier définit le modèle Review (avis) pour la base de données.
+# Il permet aux utilisateurs de laisser une note (sous forme d’étoiles) et un commentaire sur un livre.
+# Chaque avis est lié à un livre et un utilisateur.
+
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from app.database import Base

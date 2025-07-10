@@ -1,3 +1,12 @@
+# Fichier : routers/auth.py
+# Ce fichier contient les routes d'authentification de l'application :
+# - Inscription d'un nouvel utilisateur (signup)
+# - Connexion d'un utilisateur existant (login)
+# 
+# Utilise JWT pour gérer les tokens d'accès.
+# Le mot de passe est stocké sous forme hashée avec bcrypt via passlib.
+
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordRequestForm
