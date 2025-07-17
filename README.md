@@ -12,7 +12,7 @@ Create a web application to search for books via Google Books and store them in 
 ##  Technologies Used
 - Vue.js 3
 - Mysql
--Python
+- Python
 
 
 
